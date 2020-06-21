@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+    <h1>Currency converted to INR</h1>
+
+<div style="text-align: center;">
+<div style="width: 200px; float:left; background:rgb(147, 247, 122);" >
+  <h3>Currencies</h3><hr>
+  {% for i in country_names %}
+  <div>{{ i|safe }}</div>
+  <br><hr>
+  {% endfor %}
+</div>
+
+  <div style="width: 200px; float:left; background:rgb(147, 247, 122);" >
+    <h3>Abbreivation</h3><hr>
+    {% for i in abbrs %}
+    <div>{{ i|safe }}</div>
+    <br><hr>
+    {% endfor %}
+  </div>
+
+  <div style="width: 250px; float:left; background:rgb(147, 247, 122);" >
+    <h3>{{ localtime }}</h3>
+    <hr>
+    {% for i in To_INR %}
+    <div>{{ i|safe }}</div>
+    <br><hr>
+    {% endfor %}
+  </div>
+</div>
+
+
+</body>
+</html>
