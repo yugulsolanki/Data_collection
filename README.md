@@ -1,2 +1,2 @@
-# Data_collection
+# Foxex-rates-scrapper
 Web Scraping
