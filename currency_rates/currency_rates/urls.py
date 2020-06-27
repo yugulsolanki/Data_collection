@@ -20,4 +20,7 @@ from currency import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('transferwise/', views.transferwise, name='transferwise'),
+    path('iban/', views.iban, name='iban'),
+    path('xrates/', views.xrates, name='xrates'),
 ]
